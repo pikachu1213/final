@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>購物車 - AllinOne</title>
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="indexContainer">
+        <h1>AllinOne</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="cases.html">手機殼</a></li>
+                <li><a href="screen-protectors.html">保護貼</a></li>
+                <li><a href="chargers.html">充電頭</a></li>
+                <li><a href="cables.html">充電線</a></li>
+                <li><a href="power-banks.html">行動電源</a></li>
+                <li><a href="cart.html">購物車</a></li>
+                <li><a href="member_info.html">會員中心</a></li>
+                <li><a href="contact.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+          <input type="text" placeholder="搜尋...">
+          <button id="register"><a href="register.html">註冊</a></button>
+          <button id="loginBtn"><a href="login.html">登入</a></button>
+        </div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="cart">
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="images/cart1.jpg" style="width:15%">   <!---照片---->
+          <div class="item-details">
+            <h2>少女心抗黃手機殼</h2>
+            <p>價格: $799</p>
+            <div class="quantity">
+              <button class="quantity-btn decrement">-</button>
+              <input type="number" value="1" class="quantity-input">
+              <button class="quantity-btn increment">+</button>
+            </div>
+            <button class="remove-btn">移除</button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img src="images/cart2.jpg" style="width:15%">   <!---照片---->
+          <div class="item-details">
+            <h2>速速沖線</h2>
+            <p>價格: $499</p>
+            <div class="quantity">
+              <button class="quantity-btn decrement">-</button>
+              <input type="number" value="1" class="quantity-input">
+              <button class="quantity-btn increment">+</button>
+            </div>
+            <button class="remove-btn">移除</button>
+          </div>
+        </div>
+        <div class="cart-item">
+          <img src="images/cart1.jpg" style="width:15%">   <!---照片---->
+          <div class="item-details">
+            <h2>快充超划算組</h2>
+            <p>價格: $1289</p>
+            <div class="quantity">
+              <button class="quantity-btn decrement">-</button>
+              <input type="number" value="1" class="quantity-input">
+              <button class="quantity-btn increment">+</button>
+            </div>
+            <button class="remove-btn">移除</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <div class="total">
+          <h2>總價: <span id="total-price">0.00</span></h2>
+        </div>
+        <div class="coupon">
+          <input type="text" placeholder="輸入優惠碼">
+          <button class="apply-coupon-btn">使用優惠碼</button>
+        </div>
+      </div>
+    </section>
+    <section class="checkout">
+      <div class="shipping">
+        <h2>寄送方式</h2>
+        <select>
+          <option value="familymart">全家超商取貨</option>
+          <option value="seveneleven">7-11超商取貨</option>
+          <option value="blackcat">黑貓寄送</option>
+          <option value="overseas">海外寄送</option>
+        </select>
+      </div>
+      <div class="payment-method">
+        <h2>付款方式</h2>
+        <select>
+          <option value="creditcard">信用卡</option>
+          <option value="cod">貨到付款</option>
+        </select>
+      </div>
+      <div class="notes">
+        <h2>備註</h2>
+        <textarea placeholder="填寫備註"></textarea>
+      </div>
+      <button class="checkout-btn">結帳</button>
+    </section>
+  </main>
+  <script src="cart.js"></script>
+</body>
+</html>

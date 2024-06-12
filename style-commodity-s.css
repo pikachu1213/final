@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right input {
+    padding: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+header button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header button:hover {
+    background-color: #777;
+}
+
+main {
+    padding-top: 80px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+}
+
+.product-item img {
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.product-item p {
+    margin: 0;
+    color: #b12704;
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: calc(100% - 40px);
+    }
+}

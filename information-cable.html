@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品頁</title>
+    <link rel="stylesheet" href="style-commodity.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product-details">
+            <div class="product-title">多拉A夢</div>
+            <div class="product-description">
+                <span class="product-spec-title">適用產品:</span>
+                <ul class="product-spec-list">
+                    <li>iPhone 15</li>
+                    <li>iPhone 14</li>
+                    <li>iPhone 13</li>
+                </ul>
+            </div>
+            <div class="product-price">$100</div>
+            <div class="product-options">
+                <label for="specification">選擇規格:</label>
+                <select id="specification" name="specification">
+                    <option value="20cm">iPhone 15</option>
+                    <option value="50cm">iPhone 14</option>
+                    <option value="1m">iPhone 13</option>
+                </select>
+            </div>
+            <div class="product-options">
+                <label for="quantity">選擇數量:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </div>
+            <a href="#" class="buy-button">下單</a>
+        </div>
+        <div class="product-image">
+            <img src="images/images1111.jpg" alt="商品頁">
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn">
+        <img src="images/phone-icon.png" alt="回到頂部">
+    </button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+

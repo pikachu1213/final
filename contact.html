@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 - AllinOne</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="indexContainer">
+            <h1>AllinOne</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="cases.html">手機殼</a></li>
+                    <li><a href="screen-protectors.html">保護貼</a></li>
+                    <li><a href="chargers.html">充電頭</a></li>
+                    <li><a href="cables.html">充電線</a></li>
+                    <li><a href="power-banks.html">行動電源</a></li>
+                    <li><a href="cart.html">購物車</a></li>
+                    <li><a href="member_info.html">會員中心</a></li>
+                    <li><a href="contact.html">關於我們</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <input type="text" placeholder="搜尋...">
+                <button id="register"><a href="register.html">註冊</a></button>
+                <button id="loginBtn"><a href="login.html">登入</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-us">
+            <h2>關於我們</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/member1.jpg" alt="Member 1">
+                        <div class="member-name">YJ</div>
+                    </div>
+                    <h3>邱逸靜</h3>
+                    <p>負責業務:首頁、登入介面、關於我們</p>
+                    <p><a href="https://www.instagram.com/destiny9184_?igsh=aW82bzE4Z2l5eDBn&utm_source=qr" target="_blank">IG連結</a></p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/member2.jpg" alt="Member 2">
+                        <div class="member-name">ㄚ鹿</div>
+                    </div>
+                    <h3>林傳堯</h3>
+                    <p>負責業務:購物車、註冊介面、會員中心</p>
+                    <p><a href="https://www.instagram.com/pikachu_1213?igsh=MWVzdGZsdHY3N2dueg%3D%3D&utm_source=qr" target="_blank">IG連結</a></p>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="images/member3.jpg" alt="Member 3">
+                        <div class="member-name">Bowei.Chang</div>
+                    </div>
+                    <h3>張博爲</h3>
+                    <p>負責業務:商品介面</p>
+                    <p><a href="https://www.instagram.com/member3" target="_blank">IG連結</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <button id="scrollToTopBtn">
+        <img src="images/phone-icon.png" alt="回到頂部">
+    </button>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2>登入</h2>
+            <form>
+                <label for="username">用戶名:</label>
+                <input type="text" id="username" name="username"><br><br>
+                <label for="password">密碼:</label>
+                <input type="password" id="password" name="password"><br><br>
+                <button type="submit">登入</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

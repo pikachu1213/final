@@ -1,0 +1,517 @@
+/* 基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* header 樣式 */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.indexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* 調整header右上角按鈕水平排列 */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header-right button a {
+    color: black;
+    text-decoration: none;
+}
+
+.header-right button:hover {
+    background-color: #ccc;
+}
+
+main {
+    padding-top: 60px;
+}
+
+section {
+    padding: 20px;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#scrollToTopBtn img {
+    width: 20px;
+    height: 20px;
+}
+
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 熱銷排行榜 */
+.products-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.progress-container {
+    background-color: #f3f3f3;
+    border-radius: 13px;
+    padding: 3px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 20px;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+/* 本月特賣滑動功能 */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.recommendations-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 3);
+    /* 確保每組商品佔據正確寬度 */
+}
+
+.recommendation-set {
+    display: flex;
+    width: calc(100% / 3);
+    /* 每組商品佔1/3的寬度 */
+    box-sizing: border-box;
+}
+
+.recommendation-card {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.countdown-timer {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 部落客推薦樣式 */
+.recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.recommendation-card.blogger {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-img {
+    width: 25%;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.product-info {
+    width: 75%;
+}
+
+.text-box {
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.blogger-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-top: -50px;
+}
+
+/* 關於我們 */
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.member-photo {
+    position: relative;
+}
+
+.member-photo img {
+    width: 100%;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.member-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.team-member:hover .member-photo img {
+    filter: brightness(50%);
+}
+
+.team-member:hover .member-name {
+    opacity: 1;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+}
+
+.team-member p {
+    margin: 5px 0;
+}
+
+.team-member a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.team-member a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+#register form {
+    display: flex;
+    flex-direction: column;
+}
+
+#register label,
+#register input,
+#register select,
+#register button {
+    margin-bottom: 10px;
+}
+
+.member-card {
+    position: relative;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.member-card .name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    display: none;
+}
+
+.member-card:hover img {
+    filter: brightness(50%);
+}
+
+.member-card:hover .name {
+    display: block;
+}
+
+#login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+}
+
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.login-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #555;
+}

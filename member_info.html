@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資料 - AllinOne</title>
+    <link rel="stylesheet" href="member_info.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+      <div class="indexContainer">
+          <h1>AllinOne</h1>
+          <nav>
+              <ul>
+                  <li><a href="index.html">首頁</a></li>
+                  <li><a href="cases.html">手機殼</a></li>
+                  <li><a href="screen-protectors.html">保護貼</a></li>
+                  <li><a href="chargers.html">充電頭</a></li>
+                  <li><a href="cables.html">充電線</a></li>
+                  <li><a href="power-banks.html">行動電源</a></li>
+                  <li><a href="cart.html">購物車</a></li>
+                  <li><a href="member_info.html">會員中心</a></li>
+                  <li><a href="contact.html">關於我們</a></li>
+              </ul>
+          </nav>
+          <div class="header-right">
+            <input type="text" placeholder="搜尋...">
+            <button id="register"><a href="register.html">註冊</a></button>
+            <button id="loginBtn"><a href="login.html">登入</a></button>
+        </div>
+      </div>
+    </header>
+
+    <div class="member-container">
+      <h2>會員資料</h2>
+      <div id="member-info">
+        <div class="member-info-section">
+          <h3>基本資料</h3>
+          <div class="member-info-item">
+            <span class="member-info-title">使用者名稱</span>
+            <span class="member-info-data" id="username">邱比特</span>
+          </div>
+          <div class="member-info-item">
+            <span class="member-info-title">性別</span>
+            <span class="member-info-data" id="gender">男性</span>
+          </div>
+          <div class="member-info-item">
+            <span class="member-info-title">手機</span>
+            <span class="member-info-data" id="phone">0987654321</span>
+          </div>
+          <div class="member-info-item">
+            <span class="member-info-title">電子郵件</span>
+            <span class="member-info-data" id="email">loveforever@gmail.com</span>
+          </div>
+          <div class="member-info-item">
+            <span class="member-info-title">地址</span>
+            <span class="member-info-data" id="address">台北市信義區愛情路二段520號3樓</span>
+          </div>
+          <div class="member-info-item">
+            <span class="member-info-title">預設付款方式</span>
+            <span class="member-info-data" id="payment-method">信用卡</span>
+          </div>
+          <div class="member-info-item">
+            <span class="member-info-title">推薦人代碼</span>
+            <span class="member-info-data" id="referral-code">ABC123</span>
+          </div>
+        </div>
+        <div class="member-info-section">
+          <h3>歷史消費紀錄</h3>
+          <div class="purchase-item">
+            <img src="images/phone_case.jpg" alt="手機殼" style="width:10%"> <!-------------要照片----------------->
+            <div class="purchase-info">
+              <h3>手機殼</h3>
+              <p>購買日期：2024-06-01</p>
+              <p>價格：NT$200</p>
+            </div>
+          </div>
+          <div class="purchase-item">
+            <img src="images/power_bank.jpg" alt="行動電源" style="width:10%"> <!-------------要照片----------------->
+            <div class="purchase-info">
+              <h3>行動電源</h3>
+              <p>購買日期：2024-05-15</p>
+              <p>價格：NT$500</p>
+            </div>
+          </div>
+          <div class="purchase-item">
+            <img src="images/charging_cable.jpg" alt="充電線" style="width:10%"> <!-------------要照片----------------->
+            <div class="purchase-info">
+              <h3>充電線</h3>
+              <p>購買日期：2024-04-20</p>
+              <p>價格：NT$50</p>
+            </div>
+          </div>
+          <div class="purchase-item">
+            <img src="images/screen_protector.jpg" alt="保護貼" style="width:10%"> <!-------------要照片----------------->
+            <div class="purchase-info">
+              <h3>保護貼</h3>
+              <p>購買日期：2024-03-10</p>
+              <p>價格：NT$20</p>
+            </div>
+          </div>
+        </div>
+        <div class="member-info-section">
+          <h3>評論與評分紀錄</h3>
+          <div class="review">
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+            </div>
+            <p class="comment">這個手機殼真的太堅固了，我可以用它來擋住流星。</p>
+        </div>
+        
+        <div class="review">
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="comment">行動電源像是一個小型核反應爐，可以給我的手機提供無限能量！（但實際上只能充一次電）</p>
+        </div>
+        
+        <div class="review">
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="comment">嗯，我也不知道要說什麼，就是個充電線。</p>
+        </div>
+        
+        <div class="review">
+            <div class="rating">
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9734;</span>
+            </div>
+            <p class="comment">我的手機現在看起來像是包著保鮮膜的烤麵包。</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <button id="scrollToTopBtn">
+      <img src="images/phone-icon.png" alt="回到頂部">
+  </button>
+
+  <div id="loginModal" class="modal">
+      <div class="modal-content">
+          <span class="closeBtn">&times;</span>
+          <h2>登入</h2>
+          <form>
+              <label for="username">用戶名:</label>
+              <input type="text" id="username" name="username"><br><br>
+              <label for="password">密碼:</label>
+              <input type="password" id="password" name="password"><br><br>
+              <button type="submit">登入</button>
+          </form>
+      </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員註冊 - AllinOne</title>
+  <link rel="stylesheet" href="register.css"> <!-- 引入外部CSS文件 -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="indexContainer">
+        <h1>AllinOne</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="cases.html">手機殼</a></li>
+                <li><a href="screen-protectors.html">保護貼</a></li>
+                <li><a href="chargers.html">充電頭</a></li>
+                <li><a href="cables.html">充電線</a></li>
+                <li><a href="power-banks.html">行動電源</a></li>
+                <li><a href="cart.html">購物車</a></li>
+                <li><a href="member_info.html">會員中心</a></li>
+                <li><a href="contact.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+          <input type="text" placeholder="搜尋...">
+          <button id="register"><a href="register.html">註冊</a></button>
+          <button id="loginBtn"><a href="login.html">登入</a></button>
+        </div>
+    </div>
+  </header>
+
+  <!-- 主內容 -->
+  <main>
+    <div class="register_container">
+      <h2>會員註冊</h2>
+      <form id="registration-form">
+        <label for="username">使用者名稱</label>
+        <input type="text" id="username" name="username" required>
+    
+        <label for="gender">性別</label>
+        <select id="gender" name="gender">
+          <option value="male">男生</option>
+          <option value="female">女生</option>
+          <option value="other">其他</option>
+        </select>
+    
+        <label for="phone">手機</label>
+        <input type="text" id="phone" name="phone" pattern="09[0-9]{8}" required>
+    
+        <label for="email">電子郵件</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="password">密碼</label>
+        <input type="password" id="password" name="password" pattern="^(?=.*[a-zA-Z]).{8,16}$" placeholder="密碼必須為8到16個字符，且至少包含一個英文字母" required>
+    
+        <label for="confirm_password">確認密碼</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+    
+        <label for="address">地址</label>
+        <input type="text" id="address" name="address" required placeholder="請輸入詳細地址">
+    
+        <label for="payment_method">預設付款方式</label>
+        <select id="payment_method" name="payment_method">
+          <option value="cash">貨到付款</option>
+          <option value="credit_card">信用卡</option>
+          <option value="paypal">PayPal</option>
+          <option value="line_pay">Line Pay</option>
+          <option value="bank_transfer">銀行轉帳</option>
+        </select>
+    
+        <label for="referral_code">推薦人代碼</label>
+        <input type="text" id="referral_code" name="referral_code">
+    
+        <input type="submit" value="註冊">
+      </form>
+
+      <!-- 註冊成功消息 -->
+      <div id="success-message">註冊成功！</div>
+
+      <!-- 會員基本資料介面 -->
+      <div id="member-info" style="display: none;">
+        <h2>會員基本資料</h2>
+        <div class="info-item">
+            <span class="member-info-label">使用者名稱</span>
+            <span id="username-info" class="member-info-value"></span>
+        </div>
+        <div class="info-item">
+            <span class="member-info-label">性別</span>
+            <span id="gender-info" class="member-info-value"></span>
+        </div>
+        <div class="info-item">
+            <span class="member-info-label">手機</span>
+            <span id="phone-info" class="member-info-value"></span>
+        </div>
+        <div class="info-item">
+            <span class="member-info-label">電子郵件</span>
+            <span id="email-info" class="member-info-value"></span>
+        </div>
+        <div class="info-item">
+            <span class="member-info-label">地址</span>
+            <span id="address-info" class="member-info-value"></span>
+        </div>
+        <div class="info-item">
+            <span class="member-info-label">預設付款方式</span>
+            <span id="payment-method-info" class="member-info-value"></span>
+        </div>
+        <div class="info-item">
+            <span class="member-info-label">推薦人代碼</span>
+            <span id="referral-code-info" class="member-info-value"></span>
+        </div>
+        <button id="complete-button"><a href="index.html">完成</a></button>
+      </div>
+
+    </div>
+  </main>
+
+  <button id="scrollToTopBtn">
+    <img src="images/phone-icon.png" alt="回到頂部">
+  </button>
+
+    <script src="register.js"></script> <!-- 引入外部 JavaScript 文件 -->
+    <script src="scripts.js"></script>
+</body>
+</html>

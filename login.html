@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入 - AllinOne</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="indexContainer">
+            <h1>AllinOne</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="cases.html">手機殼</a></li>
+                    <li><a href="screen-protectors.html">保護貼</a></li>
+                    <li><a href="chargers.html">充電頭</a></li>
+                    <li><a href="cables.html">充電線</a></li>
+                    <li><a href="power-banks.html">行動電源</a></li>
+                    <li><a href="cart.html">購物車</a></li>
+                    <li><a href="member_info.html">會員中心</a></li>
+                    <li><a href="contact.html">關於我們</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <input type="text" placeholder="搜尋...">
+                <button id="register"><a href="register.html">註冊</a></button>
+                <button id="loginBtn"><a href="login.html">登入</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <div class="login-container">
+                <h2>登入</h2>
+                <form id="loginForm">
+                    <label for="username">用戶名:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="password">密碼:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <button type="submit">登入</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
